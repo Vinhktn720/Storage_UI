@@ -1,0 +1,25 @@
+.dis-table{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #faf9fd;
+
+}
+.mat-elevation-z8{
+  width: 50%;
+}
+
+.protable-function-bar {
+  /* background-color: red; */
+  width: 50%;
+  margin-bottom: 1%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.mat-elevation-z8 {
+  box-shadow: none;
+}

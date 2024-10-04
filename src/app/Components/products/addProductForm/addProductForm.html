@@ -1,0 +1,49 @@
+<h2 mat-dialog-title>Add product</h2>
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <mat-dialog-content>
+    <mat-form-field>
+      <mat-label>Barcode</mat-label>
+      <input matInput formControlName="barcode" name="barcode" placeholder="barcode">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>ShopId</mat-label>
+      <input matInput formControlName="shopId" name="shopId" placeholder="shopId">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" name="name" placeholder="name">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Status</mat-label>
+      <input matInput formControlName="status" name="status" placeholder="status">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>CategoryId</mat-label>
+      <input matInput formControlName="categoryId" name="categoryId" placeholder="categoryId">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Input</mat-label>
+      <input matInput formControlName="sku" name="sku" placeholder="sku">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>SKU</mat-label>
+      <input matInput formControlName="weight" name="weight" placeholder="weight">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Location</mat-label>
+      <input matInput formControlName="location" name="location" placeholder="location">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Stock</mat-label>
+      <input matInput formControlName="stock" name="stock" placeholder="stock">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>CompanyId</mat-label>
+      <input matInput formControlName="companyId" name="companyId" placeholder="companyId">
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button type="submit" mat-dialog-close>Cancel</button>
+    <button mat-button type="submit" mat-dialog-close cdkFocusInitial>Save</button>
+  </mat-dialog-actions>
+</form>
