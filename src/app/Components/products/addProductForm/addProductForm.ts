@@ -42,9 +42,24 @@ import { ProductsService } from '../../../Services/products.service';
     ngOnInit(): void {
         this.setFormState();
     }
+    formValues : any;
     onSubmit() : void 
     {
       console.log(this.productForm.value);  
+      if(this.productForm.invalid) 
+      {
+        alert("Value is not valid");
+        return;
+      } 
+      this.formValues = this.productForm.value;
+      this.productServe.addProduct(this.productForm.value).subscribe((res) => {
+        alert("Product Added successfully");
+        this.productForm.reset();
+      });
+    }
+    onNoClick() :void 
+    {
+      this.dialogRef.close();
     }
     setFormState(): void
     {

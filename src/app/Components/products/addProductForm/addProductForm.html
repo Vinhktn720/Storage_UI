@@ -41,9 +41,13 @@
       <mat-label>CompanyId</mat-label>
       <input matInput formControlName="companyId" name="companyId" placeholder="companyId">
     </mat-form-field>
+    <mat-form-field>
+      <mat-label>platform</mat-label>
+      <input matInput formControlName="platform" name="platform" placeholder="platform">
+    </mat-form-field>
   </mat-dialog-content>
   <mat-dialog-actions>
-    <button mat-button type="submit" mat-dialog-close>Cancel</button>
+    <button mat-button mat-dialog-close (click)="onNoClick()">Cancel</button>
     <button mat-button type="submit" mat-dialog-close cdkFocusInitial>Save</button>
   </mat-dialog-actions>
 </form>
