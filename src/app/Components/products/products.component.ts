@@ -53,15 +53,15 @@ export interface DialogData {
 })
 
 export class ProductsComponent implements OnInit, AfterViewInit {
-
-  displayedColumns: string[] = ['Name', 'Status', 'Location', 'Platform', 'Stock', 'Edit'];
-  dataSource = new MatTableDataSource<Products>([]);
-
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
 
   @ViewChild(MatSort) 
   sort!: MatSort;
+
+  displayedColumns: string[] = ['Name', 'Status', 'Location', 'Platform', 'Stock', 'Edit'];
+  dataSource = new MatTableDataSource<Products>([]);
+
 
   proService = inject(ProductsService);
   private _liveAnnouncer = inject(LiveAnnouncer);
